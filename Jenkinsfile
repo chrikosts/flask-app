@@ -15,7 +15,7 @@ pipeline {
             steps {
                 // Run your tests here. If you have unit tests, you can run them here.
                 // Example: bat 'python -m unittest discover'
-                // Placeholder for tests
+                   bat 'echo "Placeholder for tests"'
                 // bat 'echo "Running tests"'
             }
         }
