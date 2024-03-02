@@ -30,6 +30,7 @@ pipeline {
                     def output = bat(script: 'python app.py', returnStdout: true).trim()
                     // Write the output to a file
                     writeFile file: 'output.txt', text: output
+                    bat 'type output.txt'
                 }
             }
         }
