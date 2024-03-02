@@ -8,15 +8,15 @@ pipeline {
                 
                 // Copy your Flask application code to the workspace
                 // Assuming your app.py is in the root of your repository
-                bat 'copy app.py .'
+                // bat 'copy app.py .'
             }
         }
         stage('Test') {
             steps {
                 // Run your tests here. If you have unit tests, you can run them here.
                 // Example: bat 'python -m unittest discover'
-                   bat 'echo "Placeholder for tests"'
-                // bat 'echo "Running tests"'
+                // Placeholder for tests
+                bat 'echo "Running tests"'
             }
         }
         stage('Deploy') {
