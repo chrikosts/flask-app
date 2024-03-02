@@ -23,8 +23,14 @@ pipeline {
             steps {
                 // Deploy your application. This could involve copying files to a specific directory or starting a service.
                 // For a simple Flask app, you might just run it using a command like:
-                bat 'python app.py > output.txt'
-                bat 'type output.txt'
+                // bat 'python app.py > output.txt'
+                // bat 'type output.txt'
+                script {
+                    // Execute the Python script and capture its output
+                    def output = bat(script: 'python app.py', returnStdout: true).trim()
+                    // Write the output to a file
+                    writeFile file: 'output.txt', text: output
+                }
             }
         }
     }
