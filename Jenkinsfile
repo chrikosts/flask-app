@@ -24,7 +24,7 @@ pipeline {
                 // Deploy your application. This could involve copying files to a specific directory or starting a service.
                 // For a simple Flask app, you might just run it using a command like:
                 bat 'python app.py > output.txt'
-                bat 'cat output.txt'
+                bat 'type output.txt'
             }
         }
     }
