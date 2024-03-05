@@ -7,7 +7,7 @@ pipeline {
                 bat 'pip install -U Flask'
                 // Copy Flask application code to the workspace
                 // Assuming your app.py is in the root of your repository
-                 bat 'copy C:\tools\jenkins-agent\workspace\multibranch-flask-app_main\tests\test_apps\helloworld\hello.py app.py .'
+                 bat 'copy C:\\tools\\jenkins-agent\\workspace\\multibranch-flask-app_main\\tests\\test_apps\\helloworld\\hello.py app.py'
             }
         }
         stage('Test') {
