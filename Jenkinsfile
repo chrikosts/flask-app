@@ -7,7 +7,7 @@ pipeline {
                 bat 'pip install -U Flask'
                 // Copy Flask application code to the workspace
                 // Assuming your app.py is in the root of your repository
-                // bat 'copy app.py .'
+                 bat 'copy app.py .'
             }
         }
         stage('Test') {
